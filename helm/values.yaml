@@ -1,3 +1,11 @@
+traefikContext:
+  internal:
+    fullnameOverride: ""
+  externalPrivate:
+    fullnameOverride: ""
+  externalPublic:
+    fullnameOverride: ""
+
 traefik-internal:
   # Default values for Traefik
   # This is a YAML-formatted file.

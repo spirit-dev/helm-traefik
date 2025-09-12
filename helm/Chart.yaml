@@ -9,15 +9,15 @@ sources:
 dependencies:
   - name: traefik
     repository: https://traefik.github.io/charts
-    version: 34.5.0
+    version: 37.1.1
     alias: traefik-internal
   - name: traefik
     repository: https://traefik.github.io/charts
-    version: 34.5.0
+    version: 37.1.1
     alias: traefik-external-private
   - name: traefik
     repository: https://traefik.github.io/charts
-    version: 34.5.0
+    version: 37.1.1
     alias: traefik-external-public
 
 # A chart can be either an 'application' or a 'library' chart.

@@ -26,7 +26,7 @@ type: application
 version: 34.4.0
 
 # renovate: datasource=github-releases depName=traefik/traefik
-appVersion: "v3.2.0"
+appVersion: v3.5.2
 
 keywords:
   - traefik

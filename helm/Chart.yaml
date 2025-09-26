@@ -1,0 +1,34 @@
+apiVersion: v2
+name: traefik
+description: A Traefik based Kubernetes ingress controller
+home: https://traefik.io/
+icon: https://raw.githubusercontent.com/traefik/traefik/v2.3/docs/content/assets/img/traefik.logo.png
+sources:
+  - https://github.com/traefik/traefik
+  - https://github.com/traefik/traefik-helm-chart
+dependencies:
+  - name: traefik
+    repository: https://traefik.github.io/charts
+    version: 37.1.1
+    alias: traefik-internal
+  - name: traefik
+    repository: https://traefik.github.io/charts
+    version: 37.1.1
+    alias: traefik-external-private
+  - name: traefik
+    repository: https://traefik.github.io/charts
+    version: 37.1.1
+    alias: traefik-external-public
+
+type: application
+
+# renovate: datasource=helm depName=traefik repository=https://traefik.github.io/charts
+version: 34.4.0
+
+# renovate: datasource=github-releases depName=traefik/traefik
+appVersion: v3.5.3
+
+keywords:
+  - traefik
+  - ingress
+  - networking

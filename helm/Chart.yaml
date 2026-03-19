@@ -22,7 +22,7 @@ dependencies:
 
 type: application
 
-# renovate: datasource=helm depName=traefik repository=https://traefik.github.io/charts
+# renovate: datasource=helm depName=traefik repository=https://github.com/traefik/traefik-helm-chart
 version: 34.4.0
 
 # renovate: datasource=github-releases depName=traefik/traefik

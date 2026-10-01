@@ -1,0 +1,69 @@
+---
+apiVersion: traefik.io/v1alpha1
+kind: Middleware
+metadata:
+  name: {{ template "traefikInternal.fullname" . }}-general-headers
+  namespace: {{ .Release.Namespace }}
+  labels:
+    {{- include "traefikInternal.labels" . | nindent 4 }}
+spec:
+  headers:
+    frameDeny: true
+    sslRedirect: true
+    browserXssFilter: true
+    # Instructs some browsers to not sniff the mimetype of files. This is used for example to prevent browsers from interpreting text files as JavaScript.
+    contentTypeNosniff: true
+    # HSTS
+    stsIncludeSubdomains: true
+    stsPreload: true
+    stsSeconds: 31536000
+    # X-Frame-Options,
+    # Prevents embedding of the instance within an iframe from other domains to prevent Clickjacking and other similar attacks.#Instructs some browsers to not sniff the mimetype of files. This is used for example to prevent browsers from interpreting text files as JavaScript.
+    customFrameOptionsValue: SAMEORIGIN
+    referrerPolicy: "no-referrer"
+---
+apiVersion: traefik.io/v1alpha1
+kind: Middleware
+metadata:
+  name: {{ template "traefikExternalPrivate.fullname" . }}-general-headers
+  namespace: {{ .Release.Namespace }}
+  labels:
+    {{- include "traefikExternalPrivate.labels" . | nindent 4 }}
+spec:
+  headers:
+    frameDeny: true
+    sslRedirect: true
+    browserXssFilter: true
+    # Instructs some browsers to not sniff the mimetype of files. This is used for example to prevent browsers from interpreting text files as JavaScript.
+    contentTypeNosniff: true
+    # HSTS
+    stsIncludeSubdomains: true
+    stsPreload: true
+    stsSeconds: 31536000
+    # X-Frame-Options,
+    # Prevents embedding of the instance within an iframe from other domains to prevent Clickjacking and other similar attacks.#Instructs some browsers to not sniff the mimetype of files. This is used for example to prevent browsers from interpreting text files as JavaScript.
+    customFrameOptionsValue: SAMEORIGIN
+    referrerPolicy: "no-referrer"
+---
+apiVersion: traefik.io/v1alpha1
+kind: Middleware
+metadata:
+  name: {{ template "traefikExternalPublic.fullname" . }}-general-headers
+  namespace: {{ .Release.Namespace }}
+  labels:
+    {{- include "traefikExternalPublic.labels" . | nindent 4 }}
+spec:
+  headers:
+    frameDeny: true
+    sslRedirect: true
+    browserXssFilter: true
+    # Instructs some browsers to not sniff the mimetype of files. This is used for example to prevent browsers from interpreting text files as JavaScript.
+    contentTypeNosniff: true
+    # HSTS
+    stsIncludeSubdomains: true
+    stsPreload: true
+    stsSeconds: 31536000
+    # X-Frame-Options,
+    # Prevents embedding of the instance within an iframe from other domains to prevent Clickjacking and other similar attacks.#Instructs some browsers to not sniff the mimetype of files. This is used for example to prevent browsers from interpreting text files as JavaScript.
+    customFrameOptionsValue: SAMEORIGIN
+    referrerPolicy: "no-referrer"

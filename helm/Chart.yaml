@@ -9,15 +9,15 @@ sources:
 dependencies:
   - name: traefik
     repository: https://traefik.github.io/charts
-    version: 41.6.1
+    version: 41.7.0
     alias: traefik-internal
   - name: traefik
     repository: https://traefik.github.io/charts
-    version: 41.6.1
+    version: 41.7.0
     alias: traefik-external-private
   - name: traefik
     repository: https://traefik.github.io/charts
-    version: 41.6.1
+    version: 41.7.0
     alias: traefik-external-public
 
 type: application

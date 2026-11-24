@@ -9,15 +9,15 @@ sources:
 dependencies:
   - name: traefik
     repository: https://traefik.github.io/charts
-    version: 42.4.1
+    version: 42.4.2
     alias: traefik-internal
   - name: traefik
     repository: https://traefik.github.io/charts
-    version: 42.4.1
+    version: 42.4.2
     alias: traefik-external-private
   - name: traefik
     repository: https://traefik.github.io/charts
-    version: 42.4.1
+    version: 42.4.2
     alias: traefik-external-public
 
 type: application
@@ -26,7 +26,7 @@ type: application
 version: 34.4.0
 
 # renovate: datasource=github-releases depName=traefik/traefik
-appVersion: v3.7.19
+appVersion: v3.8.0
 
 keywords:
   - traefik
